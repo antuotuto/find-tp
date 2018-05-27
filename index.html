@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ctrl</title>
+    <style>
+        .f_cnt {
+            position: relative;
+            height: 300px;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, .05);
+        }
+
+        #advisorTreeVendorPanel {
+            position: relative;
+        }
+
+        .find-item {
+            background-color: blue;
+            color: white;
+            background-color: rgba(0, 0, 0, .1);
+            border-radius: 2px;
+        }
+
+        .find-item-active {
+            background-color: rgba(0, 0, 0, .75);
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="" id="formFind">
+        <input type="text" name="" id="textFind">
+        <button type="submit">查找</button>
+    </form>
+    <!--  -->
+    <div class="f_cnt" style="padding: 0;">
+        <ul id="advisorTreeVendorPanel" class="tree">
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">111</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895997503601599754afd10000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">111</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">123</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895e649bbc015e649e82200000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">123</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">132</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="531a24105e50359b015e50b4b79c0000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">送来的</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">222</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a89557cf9b40155817ff5870000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">2</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">31</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895e50318e015e50b5009d0000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">54</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">888</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a8959a5294f0159a53786d60001" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">88</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">Antal</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a9349f71f11014a18b40b4e0005" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">Amy Yang(Tel: +86 10 641...)
+                                <div style="max-width: 200px; background: rgb(0, 0, 0); border: 1px solid rgb(0, 0, 0); color: rgb(255, 255, 255); z-index: 999; position: absolute; line-height: 13px; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; display: none;">Tel: +86 10 6410 8866 ext. 218</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">ceshiGAP</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="531a24105f0f49a8015f0f8524360000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">华子张1(11111)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">11111</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">eeee8</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895287a7de015287b9ded40000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">yy_anita8</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">FESCO</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a9349f71f11014a0e0014520001" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">Ms. Maggie Ma 马小晨(2nd Priority)
+                                <div style="max-width: 200px; background: rgb(0, 0, 0); border: 1px solid rgb(0, 0, 0); color: rgb(255, 255, 255); z-index: 999; position: absolute; line-height: 13px; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; display: none;">2nd Priority</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">gg</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a8959a5294f0159a5382a320002" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">gg</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">Golden-Careers</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a9349f71f11014a0eed4bf90003" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">Catherine Yin(Production, Pla...)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">Production, Planning</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">mahongbo</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a8954985af401549875d6430000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">mahongbo</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">Pro-matrix</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a9349f71f11014a1356025f0004" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">Tracy Zhao</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">qwe</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895e512429015e51da81f10000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">qwe</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tree-node" node-id="531a24105e54e8a9015e55341d2c0000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">QWE(QWE)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">QWE</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">sun</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="531a24105ed0ad19015ed0fafd600000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">孙建飞</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">Talentpool</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a9349f71f11014a0e8b7a9f0002" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">Ms. Joy Liu(For EE position...)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">For EE positions</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">USHITALENT 北京优仕一方商务咨询有限公司</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a9349f71f11014a0dc9de510000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">Mr. Laurin Liu 刘玮(PSL, Automotive...)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">PSL, Automotive engineer, sales, marketing, production planning, German</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">woshishi</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a8958d87cc30158d88eaae90002" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">AABB</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">yakuza</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a894ff508f3014ff7e899310002" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">nami(IT)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">IT</div>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895939f0e301593a777f9b0000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">uusobu</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">zhchg</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="531a24105ca5ad9f015ca5c4622b0000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">zhchg</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">·111</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a8959a5294f0159a536e54b0000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">111</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">刘宾</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="531a24105cf1bf77015cf1e3a9910000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">刘宾</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">华子张</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node tree-node-selected" node-id="2c908a895aa828a9015aac6e395f0000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">huazi(测试猎头)
+                                <div style="max-width: 200px; background: rgb(0, 0, 0); border: 1px solid rgb(0, 0, 0); color: rgb(255, 255, 255); z-index: 999; position: absolute; line-height: 13px; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; display: none;">测试猎头</div>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895e3d9f49015e3da127890000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">日尧涵晓</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">图谱猎头</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895bd28d21015bd2ecbeff0000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">张震(测试)
+                                <div style="max-width: 200px; background: rgb(0, 0, 0); border: 1px solid rgb(0, 0, 0); color: rgb(255, 255, 255); z-index: 999; position: absolute; line-height: 13px; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; display: none;">测试</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">大瀚</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a89549ef36501549f4ff13a0003" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">小芳</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">小芳</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895a279acf015a357782450000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">哈哈哈</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895a279acf015a357d689e0001" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">月月</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">我是空的</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895a174c6c015a1783dcf20000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">我是空的的猎头</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">测试创建账号错误</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="531a24105ccf63b1015ccf72aa4e0002" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">小家(ceshi)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">ceshi</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">海南博人咨询管理有限公司</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="531a24105ccf63b1015ccf756aa80004" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">庄财灿(13876500032)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">13876500032</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">猎头公司</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a895dac5c78015dac8f1d670000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">张晓华</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">王猛个人</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a894efba7a5014efbd054850001" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">yy</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">职脉</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="2c908a894efcf8b0014efd028c200000" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">王铁成(000)
+                                <div style="max-width:200px; background:#000000; border:1px solid #000000; color: #ffffff; z-index: 999; display: none; position: absolute; line-height:13px; white-space:pre-wrap; word-break:break-all; word-wrap:break-word;">000</div>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="tree-node" node-id="" style="cursor: pointer;">
+                    <span class="tree-hit tree-expanded"></span>
+                    <span class="tree-icon tree-folder tree-folder-open"></span>
+                    <span class="tree-checkbox tree-checkbox0"></span>
+                    <span class="tree-title">请问</span>
+                </div>
+                <ul>
+                    <li>
+                        <div class="tree-node" node-id="531a24105e50359b015e50b5f6700001" style="cursor: pointer;">
+                            <span class="tree-indent"></span>
+                            <span class="tree-indent"></span>
+                            <span class="tree-icon tree-file"></span>
+                            <span class="tree-checkbox tree-checkbox0"></span>
+                            <span class="tree-title">321</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- script -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/find.js"></script>
+    <script>
+        var find = new Find('.f_cnt', '#advisorTreeVendorPanel', {
+            form: '#formFind',
+            text: '#textFind'
+        });
+
+    </script>
+</body>
+
+</html>
